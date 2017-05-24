@@ -5,10 +5,9 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.HBox?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.BMI.controllers.TopMenuButtonsController">
    <children>
-      <ToggleButton mnemonicParsing="false" onAction="#openCar" prefHeight="70.0" prefWidth="150.0" text="Lista Samochodów">
+      <ToggleButton mnemonicParsing="false" onAction="#openCar" prefHeight="70.0" prefWidth="150.0" text="%list.car">
          <toggleGroup>
             <ToggleGroup fx:id="toggleButtons" />
          </toggleGroup>
@@ -16,12 +15,12 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
       </ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#openRentCar" prefHeight="70.0" prefWidth="170.0" text="Samochody wypożyczone" toggleGroup="$toggleButtons">
+      <ToggleButton mnemonicParsing="false" onAction="#openRentCar" prefHeight="70.0" prefWidth="170.0" text="%rent.car" toggleGroup="$toggleButtons">
          <HBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
       </ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#openStatistic" prefHeight="70.0" prefWidth="170.0" text="Statystyki" toggleGroup="$toggleButtons">
+      <ToggleButton mnemonicParsing="false" onAction="#openStatistic" prefHeight="70.0" prefWidth="170.0" text="%statistic" toggleGroup="$toggleButtons">
          <HBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
