@@ -1,7 +1,8 @@
-package pl.BMI.dialogs;
+package pl.BMI.utils;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextArea;
 
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -11,7 +12,7 @@ import java.util.ResourceBundle;
  */
 public class DialogUtils {
 
-    static ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.messages");
+    static ResourceBundle resourceBundle = FxmlUtils.getResourceBundle();
 
     public static void dialogAboutApplication(){
         Alert informationAlert = new Alert(Alert.AlertType.INFORMATION);
@@ -27,5 +28,14 @@ public class DialogUtils {
         confirmationAlert.setHeaderText(resourceBundle.getString("exit.header"));
         Optional<ButtonType> result = confirmationAlert.showAndWait();
         return result;
+    }
+
+    public static void errorDialog(String error){
+        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+        errorAlert.setTitle(resourceBundle.getString("error.title"));
+        errorAlert.setHeaderText(resourceBundle.getString("error.header"));
+        TextArea textArea = new TextArea(error);
+        errorAlert.getDialogPane().setContent(textArea);
+        errorAlert.showAndWait();
     }
 }
