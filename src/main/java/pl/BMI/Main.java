@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import pl.BMI.database.models.dbutils.DbManager;
 import pl.BMI.utils.FxmlUtils;
 
 
@@ -25,5 +26,7 @@ public class Main extends Application{
         primaryStage.setScene(scene);
         primaryStage.setTitle(FxmlUtils.getResourceBundle().getString("title.application"));
         primaryStage.show();
+
+        DbManager.initDatabase();
     }
 }
